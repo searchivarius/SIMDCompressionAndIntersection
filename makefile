@@ -31,6 +31,9 @@ all: unit  testcodecs  testintegration  advancedbenchmarking benchintersection
 
 advancedbenchmarking: simplesynth compress uncompress budgetedtest entropy 
 
+ironpeterpackinghelpers.o: include/ironpeterpackinghelpers.h src/ironpeterpackinghelpers.cpp
+	$(CXX) $(CXXFLAGS) -c src/ironpeterpackinghelpers.cpp -Iinclude
+
 bitpacking.o: include/bitpacking.h src/bitpacking.cpp
 	$(CXX) $(CXXFLAGS) -c src/bitpacking.cpp -Iinclude
 
@@ -61,7 +64,7 @@ simdintegratedbitpacking.o: include/simdintegratedbitpacking.h include/delta.h s
 UNAME := $(shell uname)
 
 
-OBJECTS= bitpacking.o integratedbitpacking.o simdbitpacking.o usimdbitpacking.o    simdintegratedbitpacking.o   intersection.o  
+OBJECTS= bitpacking.o integratedbitpacking.o simdbitpacking.o usimdbitpacking.o    simdintegratedbitpacking.o   intersection.o  ironpeterpackinghelpers.o
 
 
 unit: $(HEADERS)   src/unit.cpp $(OBJECTS)
