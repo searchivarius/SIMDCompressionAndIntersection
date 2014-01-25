@@ -9,5 +9,5 @@ This includes at least two additions/changes:
 
 Try, e.g.:
 
-make
+make  
 ./testcodecs copy s4-fastpfor-d4
