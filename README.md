@@ -10,4 +10,4 @@ This includes at least two additions/changes:
 Try, e.g.:
 
 make  
-./testcodecs copy s4-bp128-d4 s4-fastpfor-d4 
+./testcodecs copy s4-bp128-d4 s4-fastpfor-d1
